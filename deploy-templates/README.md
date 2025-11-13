@@ -62,5 +62,7 @@ A Helm chart for Kubernetes
 | serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
 | serviceAccount.name | string | `""` | The name of the service account to use. If not set and create is true, a name is generated using the fullname template |
 | tolerations | list | `[]` | https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/ |
-| volumeMounts | list | `[]` |  |
-| volumes | list | `[]` |  |
+| volumeMounts[0].mountPath | string | `"/tmp/logs"` |  |
+| volumeMounts[0].name | string | `"logs"` |  |
+| volumes[0].name | string | `"logs"` |  |
+| volumes[0].persistentVolumeClaim.claimName | string | `"data-logs"` |  |
