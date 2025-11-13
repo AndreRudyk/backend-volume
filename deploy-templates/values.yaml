@@ -92,10 +92,7 @@ autoscaling:
   # targetMemoryUtilizationPercentage: 80
 
 # Additional volumes on the output Deployment definition.
-volumes:
-  - name: logs
-    persistentVolumeClaim:
-      claimName: data-logs
+volumes: []
 # - name: foo
 #   secret:
 #     secretName: mysecret
