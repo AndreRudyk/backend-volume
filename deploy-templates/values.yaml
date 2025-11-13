@@ -92,13 +92,9 @@ autoscaling:
   # targetMemoryUtilizationPercentage: 80
 
 # Additional volumes on the output Deployment definition.
-volumes:
-  - name: logs
-    persistentVolumeClaim:
-      claimName: data-logs
-volumeMounts:
-  - mountPath: /tmp/logs
-    name: logs
+volumes: []
+
+volumeMounts: []
 
 
 # -- https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector
